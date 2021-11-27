@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif ; 
+ }
+ body{
+   background: linear-gradient(190deg, rgb(1, 1, 90) 0%, rgb(6, 6, 255) 50%, rgb(226, 43, 156) 100%);
+ }
+ header{
+    background-image: url(https://i.guim.co.uk/img/media/5a8137ea1b7001b3c90488cdfd59288d62f8d464/0_89_5035_3018/master/5035.jpg?width=465&quality=45&auto=format&fit=max&dpr=2&s=7908b98a4a382ef7fd2ddea8e7a311e0);
+    background-color: #cccccc;
+    height: 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+    .h1{
+      width: 300px;
+      margin: 40px 0 0 20px;
+      padding: 20px 0 0 10px;
+      background: linear-gradient(90deg, blue 0%, rgb(154, 7, 180) 50%, #ff00d4 100%);
+      display: inline-block;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; 
+    }
+ 
+  
+    span{
+      background: linear-gradient(90deg, blue 0%, rgb(154, 7, 180) 50%, #ff00d4 100%);
+  display: inline-block;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    
+  animation:slidebg 10s linear infinite ;
+  }
+  
+  @keyframes slidebg {
+    to {
+      background-position:30vw;
+    }
+  }
+nav{
+    overflow: hidden;
+    background:linear-gradient(140deg, rgb(0, 108, 250) 40%,rgba(101, 5, 255, 0.561),rgb(82, 2, 156) );
+    width: 100%;
+     font-size: 17px;
+     /* animation: navBackground 10s infinite alternate; */
+  
+    
+     
+   }
+   /* @keyframes navBackground{
+    0%{
+      background: red;
+    }
+    50%{
+      background: blue;
+    }
+    100%{
+      background: orange;
+    }
+   } */
+   nav ul li{
+    display: inline-flex;
+    padding: 25px 20px 25px 20px;
+  }
+  nav ul li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    position: relative;
+  }
+  nav ul li a:hover{
+    color: rgb(255, 255, 255);
+  }
+  .ul li a::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(0, 0, 0);
+    transition:  0.5s;
+  }
+  .ul li a:hover::after{
+    width: 70%;
+  }
+  nav>ul>li>a:first-child{
+    padding: 0 10px 0 10px;
+    border-left: 1px solid rgb(255, 255, 255);
+  }
+  nav>ul>li>a:last-child{
+   
+    border-right: 1px solid rgb(255, 255, 255);
+  }
+  nav>ul>li>a:last-child:hover{
+  
+    border-left: 1px   solid rgb(0, 0, 0);
+    border-right: 1px solid rgb(0, 0, 0);
+  }
+  form{
+     display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;
+     justify-content: center;
+     align-items: center;
+     padding: 15px 20px 15px 20px;
+  }
+  input{
+     padding: 10px;
+     margin: 15px;
+     width: 100%;
+     outline:none;
+     background-color: rgb(83, 2, 235);
+     border: none;
+     border-radius: 10px 10px 0 0;
+     text-align: center;
+     border-bottom: 2px solid rgb(5, 141, 175);
+  }
+  input:hover{
+    background:rgb(227, 230, 255);
+    border-radius: 10px 10px 0 0;
+    
+  }
+ 
+ aside{
+   display: flex;
+   justify-content: center;
+   flex-direction:row;
+   flex-wrap:wrap;
+
+ }
+
+   button{
+     width: 400px;
+  font-size: 20px;
+padding: 5px; 
+margin: 10px 20px 30px 200px;
+cursor:pointer;
+background: linear-gradient(90deg, blue 0%, rgb(154, 7, 180) 50%, #ff00d4 100%);
+display: inline-block;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+border-radius: 15px;
+border: 2px solid rgb(68, 0, 255);
+margin-left:  20px; ;
+
+ }
+  
+  button:hover{
+    animation:slidebg 1s linear infinite ;
+  }
+  
+  @keyframes slidebg {
+    to {
+      background-position:30vw;
+    }
+  }

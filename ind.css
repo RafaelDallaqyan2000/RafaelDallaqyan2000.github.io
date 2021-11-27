@@ -1,0 +1,137 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+  background-image: url(https://i.guim.co.uk/img/media/5a8137ea1b7001b3c90488cdfd59288d62f8d464/0_89_5035_3018/master/5035.jpg?width=465&quality=45&auto=format&fit=max&dpr=2&s=7908b98a4a382ef7fd2ddea8e7a311e0);
+  background-color: #cccccc;
+  height: 150px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.h1{
+  width: 300px;
+  margin: 40px 0 0 20px;
+  padding: 20px 0 0 10px;
+  background: linear-gradient(90deg, rgb(29, 3, 146) 0%, rgb(10, 7, 180) 50%, #1900ff86 100%);
+  display: inline-block;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+
+span{
+  background: linear-gradient(90deg, blue 0%, rgb(154, 7, 180) 50%, #ff00d4 100%);
+display: inline-block;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+animation:slidebg 10s linear infinite ;
+}
+
+@keyframes slidebg {
+to {
+  background-position:30vw;
+}
+}
+nav{
+  overflow: hidden;
+  background:linear-gradient(140deg, rgb(0, 108, 250) 40%,rgba(101, 5, 255, 0.561),rgb(82, 2, 156) );
+  width: 100%;
+   font-size: 17px;
+ }
+nav ul li{
+  display: inline-flex;
+  padding: 25px 5px 25px 5px;
+  margin-left: 20px ;
+}
+nav ul li a{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  position: relative;
+}
+nav ul li a:hover{
+  color: rgb(255, 255, 255);
+  transition: 0.2s;
+}
+.ul li a::after{
+  content: "";
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(0, 0, 0);
+  transition:  0.5s;
+}
+.ul li a:hover::after{
+  width: 70%;
+}
+nav>ul>li>a:first-child{
+  padding: 0 10px 0 10px;
+  border-left: 1px solid rgb(255, 255, 255);
+}
+nav>ul>li>a:last-child{
+  border-right: 1px solid rgb(255, 255, 255);
+}
+nav>ul>li>a:last-child:hover{
+  border-left: 1px   solid rgb(0, 0, 0);
+  border-right: 1px solid rgb(0, 0, 0);
+}
+#someRequest{
+font-size: 20px;
+padding: 20px; 
+margin: 20px 20px 30px 200px;
+cursor:pointer;
+background: linear-gradient(90deg, rgb(199, 1, 182) 0%, rgb(0, 26, 255) 50%, rgb(0, 162, 255)100%);
+display: inline-block;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+border-radius: 15px;
+box-shadow: 5px 5px 0px 0px blue;
+border: 3px solid blue;
+}
+#someRequest:hover{
+  animation:slidebg 2s linear infinite ;
+}
+
+@keyframes slidebg {
+  to {
+    background-position:30vw;
+  }
+}
+#addStudent{
+  border: 3px solid blueviolet;
+  border-radius: 15px;
+  padding: 20px;
+  font-size: 20px;
+  box-shadow: 5px 5px 0px 0px blueviolet;
+  background: linear-gradient(90deg, blue 0%, blueviolet 50%, #b300ff 100%);  display: inline-block;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 200px;
+}
+#addStudent:hover{
+  cursor: pointer;
+  animation:slidebg 2s linear infinite ;
+}
+::-webkit-scrollbar{
+
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+/* box-shadow: inset 0 0 5px rgb(83, 35, 110);  */
+border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: linear-gradient(180deg, rgb(92, 91, 91), rgb(34, 34, 56), rgb(0, 255, 136));
+border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+background:rgb(0, 0, 0); 
+}
