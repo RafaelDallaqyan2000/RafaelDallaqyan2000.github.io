@@ -12,18 +12,6 @@
    }
  }
 
- let b = {};
- b.name = "Noro";
- b.age = 18;
- b.lastName = "Mirz";
-
- const i = {
-   name : "Rafael",
-   age : 21
- };
- for(let ie in b){
-   console.log(ie + ":" + b[ie] + "\n" + i[ie]);
- }
 
  
 //  for(z in b){
