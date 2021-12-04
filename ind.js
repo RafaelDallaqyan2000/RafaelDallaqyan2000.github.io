@@ -27,8 +27,10 @@ function drowResponseDataToPage(data) {
             let mainList = document.getElementById('studentsList');
             mainList.appendChild(listItem);
             $('li').css({ 'border-bottom': '1px solid black', 'padding': '5px' });
-            $('i').css({ 'font-size': '20px', 'cursor': 'pointer' });
+            $('i').css({'font-size': '20px', 'cursor': 'pointer' });
             $('.container').css({ 'float': 'right' });
+            $('.fa-trash-o').css({'color' : 'red'})
+            $('.fa-edit').css({'color' : 'green'})
         }
     }
     handleRemoveClick();
@@ -68,6 +70,7 @@ function showAlert(ev) {
         method: 'DELETE',
         success: function () {
             alert('Student is deleted successfully!!!');
+            window.location.replace("ind.html")
         },
         error: function (xhr, status, error) {
             alert('Something went wrong ' + xhr.status + ' ' + xhr.statusText);
@@ -78,16 +81,54 @@ function showAlert(ev) {
 
 function editResponseData(responseObject) {
     console.log('AAAAAAAAA---->>>', responseObject);
-    let inputFieldTitle = document.createElement('INPUT');
-    inputFieldTitle.value = responseObject.firstname;
-    document.getElementById('inputConteiner').appendChild(inputFieldTitle);
-    let inputFieldBody = document.createElement('INPUT');
-    inputFieldBody.value = responseObject.lastname;
-    document.getElementById('inputConteiner').appendChild(inputFieldBody);
-    let changeValue = document.createElement("BUTTON").value = "Na";
-    
+    let inputFieldFirstName = document.createElement('INPUT');
+    inputFieldFirstName.value = responseObject.firstname;
+    document.getElementById('inputConteiner').appendChild(inputFieldFirstName);
+    let inputFieldLastName = document.createElement('INPUT');
+    inputFieldLastName.value = responseObject.lastname;
+    document.getElementById('inputConteiner').appendChild(inputFieldLastName);
+    let inputFieldEmail = document.createElement('INPUT');
+    inputFieldEmail.value = responseObject.email;
+    document.getElementById('inputConteiner').appendChild(inputFieldEmail);
+    let inputFieldPhone = document.createElement('INPUT');
+    inputFieldPhone.value = responseObject.mobile;
+    document.getElementById('inputConteiner').appendChild(inputFieldPhone);
+    let inputFieldAge = document.createElement('INPUT');
+    inputFieldAge.value = responseObject.age;
+    document.getElementById('inputConteiner').appendChild(inputFieldAge);
+    let confirmBotton = document.createElement('BUTTON');
+    confirmBotton.innerText = "Submit"
+    document.getElementById('inputConteiner').appendChild(confirmBotton);
+    let dataId = responseObject._id;
+
+    confirmBotton.addEventListener('click', function () {
+        let objForEditedData = {};
+        objForEditedData.firstname = inputFieldFirstName.value;
+        objForEditedData.lastname = inputFieldLastName.value;
+        objForEditedData.email = inputFieldEmail.value;
+        objForEditedData.mobile = inputFieldPhone.value;
+        objForEditedData.age = inputFieldAge.value;
+        console.log('object', objForEditedData);
+        $.ajax({
+            url: `http://127.0.0.1:3000/students/${dataId}`,
+            method:'PUT',
+            data:objForEditedData,
+            success:function(){
+                alert('Yes')
+                window.location.replace('/')
+            },
+            error: function (xhr, status, error) {
+                alert('Something went wrong ' + xhr.status + ' ' + xhr.statusText);
+            }
+
+            
+        }
+
+        )
+    })
 
 }
+
 
 
 
@@ -105,6 +146,71 @@ $(document).ready(function () {
         })
     })
 })
+
+     // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("addStudent");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+$("#button_1").click(function(){
+    let array = {
+        "firstname" : "",
+        "lastname" : "",
+        "email" : "",
+        "mobile" : "",
+        "age" : ""
+    };
+   
+       let firstname = document.getElementById("studentName").value;
+       let lastName = document.getElementById("lastName").value;
+       let email = document.getElementById("Email").value;
+       let mobile = document.getElementById("phone").value;
+       let age = document.getElementById("age").value;
+   
+        array.firstname = firstname;
+        array.lastname = lastName;
+        array.email = email;
+        array.mobile = mobile;
+        array.age = age;
+      
+       console.log("Arrr-->>>", array);
+       
+       $.ajax({
+         url: "http://127.0.0.1:3000/students",
+         method: 'POST',
+         data: array,
+         success: function (returnData) {
+             alert("Student is added successfully");
+             window.location.replace('/')
+         },
+         error: function (xhr, status, error) {
+            console.log('Something went wrong ' + xhr.status + ' ' + xhr.statusText);
+         }
+     });
+     
+     })
+    
+      
 // function deleteAllStudents(params) {
 //     const idLists = [];
 //     params.map((item) => {

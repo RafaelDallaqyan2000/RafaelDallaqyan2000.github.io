@@ -44,7 +44,7 @@ $(document).ready(function(){
           window.location.replace('/')
       },
       error: function (xhr, status, error) {
-          alert('Something went wrong ' + xhr.status + ' ' + xhr.statusText);
+         console.log('Something went wrong ' + xhr.status + ' ' + xhr.statusText);
       }
   });
   

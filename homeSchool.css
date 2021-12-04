@@ -1,7 +1,10 @@
  *{
    margin: 0;
    padding: 0;
-   font-family:Arial, Helvetica, sans-serif ; 
+   font-family:cursive, sans-serif; 
+   
+   /* font-weight: bold; */
+   /* font-stretch: condensed; */
 }
 
   header{
@@ -20,6 +23,7 @@
    width: 100%;
     font-size: 17px;
     z-index: 1000;
+    font-size: 14pt;
   }
   .img{
     float: left;
@@ -30,7 +34,7 @@
   }
   nav ul li{
     display: inline-flex;
-    padding: 25px 20px 25px 20px;
+    padding: 25px 20px 25px 20px; 
   }
   nav ul li a{
     text-decoration: none;
@@ -159,6 +163,10 @@ animation:slidebg 10s linear infinite ;
   to {
     background-position:30vw;
   }
+}
+p{
+  font-family: monospace;
+  font-size: 12pt;
 }
   #textDiv{
     overflow-y: scroll;
