@@ -23,7 +23,7 @@ header{
   -webkit-text-fill-color: transparent; 
 }
 
-span{
+.span{
   background: linear-gradient(90deg, blue 0%, rgb(154, 7, 180) 50%, #ff00d4 100%);
 display: inline-block;
 -webkit-background-clip: text;
@@ -110,14 +110,14 @@ border: 3px solid blue;
   padding: 20px;
   font-size: 20px;
   box-shadow: 5px 5px 0px 0px blueviolet;
-  background: linear-gradient(90deg, blue 0%, blueviolet 50%, #b300ff 100%);  display: inline-block;
+  background: linear-gradient(90deg, blue 0%, blueviolet 50%, #ff00f2 100%);  display: inline-block;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-left: 200px;
 }
 #addStudent:hover{
   cursor: pointer;
-  animation:slidebg 2s linear infinite ;
+  animation:slidebg 3s linear infinite ;
 }
 ::-webkit-scrollbar{
 
@@ -165,10 +165,10 @@ background:rgb(0, 0, 0);
 
 /* The Close Button */
 .close {
-  color: #aaaaaa;
   float: right;
-  font-size: 28px;
+  font-size: 2.5em;
   font-weight: bold;
+  color: #ff0055;
 }
 
 .close:hover,
@@ -176,6 +176,12 @@ background:rgb(0, 0, 0);
   color: #000;
   text-decoration: none;
   cursor: pointer;
+  background: linear-gradient(90deg, rgb(148, 2, 2) 0%, rgb(255, 0, 0) 50%, #a80202 100%);
+  display: inline-block;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation:slidebg 20s linear infinite ;
+  transition:all 2s;
 }
 
 div form {
@@ -206,8 +212,15 @@ div form input{
 }
 #button_1:hover{
   cursor: pointer;
-  animation:slidebg 2s linear infinite ;
+  animation:slidebg 3s linear infinite ;
 }
 h2{
   text-align: center;
+}
+.span2{
+  background: linear-gradient(90deg, rgb(255, 0, 0) 0%, rgb(154, 7, 180) 50%, #ff5100 100%);
+  display: inline-block;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation:slidebg 10s linear infinite ;
 }

@@ -141,7 +141,7 @@ $(document).ready(function () {
                 drowResponseDataToPage(returnData);
             },
             error: function (xhr, status, error) {
-                alert('Something went wrong ' + xhr.status + ' ' + xhr.statusText);
+                alert('Something went wrong \n ' + xhr.statusText + ' : ' + xhr.status);
             }
         })
     })
