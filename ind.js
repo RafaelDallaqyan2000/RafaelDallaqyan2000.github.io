@@ -210,7 +210,6 @@ $("#button_1").click(function(){
      
      })
     
-      
 // function deleteAllStudents(params) {
 //     const idLists = [];
 //     params.map((item) => {
