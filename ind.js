@@ -191,7 +191,10 @@ $("#button_1").click(function(){
         array.lastname = lastName;
         array.email = email;
         array.mobile = mobile;
-        array.age = age;
+        array.age = age; 
+        if(firstname == /[A-Z][a-z]{2,}/){
+            alert("goodd")
+        }
       
        console.log("Arrr-->>>", array);
        
@@ -249,5 +252,5 @@ $("#button_1").click(function(){
 //     },
 //     error: function(XMLHttpRequest, textStatus, errorThrown) {
 //        alert("some error");
-//     }
-//   });
+// }
+// });
