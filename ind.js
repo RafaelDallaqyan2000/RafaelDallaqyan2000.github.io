@@ -100,7 +100,8 @@ function editResponseData(responseObject) {
     confirmBotton.innerText = "Submit"
     document.getElementById('inputConteiner').appendChild(confirmBotton);
     let dataId = responseObject._id;
-
+"text2"
+    //new popup
     confirmBotton.addEventListener('click', function () {
         let objForEditedData = {};
         objForEditedData.firstname = inputFieldFirstName.value;
@@ -115,7 +116,7 @@ function editResponseData(responseObject) {
             data:objForEditedData,
             success:function(){
                 alert('Yes')
-                window.location.replace('/')
+                window.location.replace('ind.html')
             },
             error: function (xhr, status, error) {
                 alert('Something went wrong ' + xhr.status + ' ' + xhr.statusText);
@@ -127,9 +128,8 @@ function editResponseData(responseObject) {
         )
     })
 
+
 }
-
-
 
 
 $(document).ready(function () {
@@ -172,46 +172,44 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-$("#button_1").click(function(){
-    let array = {
-        "firstname" : "",
-        "lastname" : "",
-        "email" : "",
-        "mobile" : "",
-        "age" : ""
-    };
+// $("#button_1").click(function(){
+//     let array = {
+//         "firstname" : "",
+//         "lastname" : "",
+//         "email" : "",
+//         "mobile" : "",
+//         "age" : ""
+//     };
    
-       let firstname = document.getElementById("studentName").value;
-       let lastName = document.getElementById("lastName").value;
-       let email = document.getElementById("Email").value;
-       let mobile = document.getElementById("phone").value;
-       let age = document.getElementById("age").value;
+//        let firstname = document.getElementById("studentName").value;
+//        let lastName = document.getElementById("lastName").value;
+//        let email = document.getElementById("Email").value;
+//        let mobile = document.getElementById("phone").value;
+//        let age = document.getElementById("age").value;
    
-        array.firstname = firstname;
-        array.lastname = lastName;
-        array.email = email;
-        array.mobile = mobile;
-        array.age = age; 
-        if(firstname == /[A-Z][a-z]{2,}/){
-            alert("goodd")
-        }
+//         array.firstname = firstname;
+//         array.lastname = lastName;
+//         array.email = email;
+//         array.mobile = mobile;
+//         array.age = age; 
+        
       
-       console.log("Arrr-->>>", array);
+//        console.log("Arrr-->>>", array);
        
-       $.ajax({
-         url: "http://127.0.0.1:3000/students",
-         method: 'POST',
-         data: array,
-         success: function (returnData) {
-             alert("Student is added successfully");
-             window.location.replace('/')
-         },
-         error: function (xhr, status, error) {
-            console.log('Something went wrong ' + xhr.status + ' ' + xhr.statusText);
-         }
-     });
+//        $.ajax({
+//          url: "http://127.0.0.1:3000/students",
+//          method: 'POST',
+//          data: array,
+//          success: function (returnData) {
+//              alert("Student is added successfully");
+//              window.location.replace('/')
+//          },
+//          error: function (xhr, status, error) {
+//             console.log('Something went wrong ' + xhr.status + ' ' + xhr.statusText);
+//          }
+//      });
      
-     })
+//      })
     
 // function deleteAllStudents(params) {
 //     const idLists = [];

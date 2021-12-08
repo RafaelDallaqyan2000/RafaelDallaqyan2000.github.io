@@ -16,7 +16,7 @@
 
 <body>
     <header>    
-        <h1 class="h1"><i class="fa fa-institution"></i>SCHOOL <span class="span">R</span></h1>
+        <h1 class="h1"><i class="fa fa-institution"></i>SCHOOL <span class="span">N<sup>o</sup>5</span></h1>
         
     </header>
    <nav id="navbar">
@@ -36,7 +36,22 @@
     <div id=txt2></div>
     <!-- <button id="txtBtn">Load Text</button>
     <button id="htmlBtn">Load HTML</button> -->
-    <div id="inputConteiner"></div>
+    <div id="myModal" class="modal">
+       
+        <!-- Modal content -->
+        <div class="inputConteiner">
+          <span class="close">&times;</span>
+          <h2>Add new student</h2>
+          <form>
+              <input type="text" placeholder="Name" id="studentName1" required>
+              <input type="text" placeholder="LastName" id="lastName1" required>
+              <input type="email" placeholder="Email" id="Email1" required>
+              <input type="tel" placeholder="Telephone" id="phone1" required>
+              <input type="number" placeholder="Age" id="age1" required>
+              <button id="button_1"><b id="be">Add</b></button>
+          </form>
+        </div>
+      </div>
     <div id="resp" style="background-color: #583e702b; margin-top: 30px; padding: 0px 20px 0px 20px;">
         <ol id="studentsList" class="list"></ol>
     </div>
@@ -50,11 +65,11 @@
           <span class="close">&times;</span>
           <h2>Add new student</h2>
           <form>
-              <input type="text" placeholder="Name" id="studentName">
-              <input type="text" placeholder="LastName" id="lastName">
-              <input type="email" placeholder="Email" id="Email">
-              <input type="tel" placeholder="Telephone" id="phone">
-              <input type="number" placeholder="Age" id="age">
+              <input type="text" placeholder="Name" id="studentName" required>
+              <input type="text" placeholder="LastName" id="lastName" required>
+              <input type="email" placeholder="Email" id="Email" required>
+              <input type="tel" placeholder="Telephone" id="phone" required>
+              <input type="number" placeholder="Age" id="age" required>
               <button id="button_1"><b id="be">Add</b></button>
           </form>
         </div>
