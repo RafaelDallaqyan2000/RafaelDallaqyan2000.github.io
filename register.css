@@ -13,11 +13,14 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
   }
   
     .h1{
       width: 300px;
-      margin: 40px 0 0 20px;
+     
       padding: 20px 0 0 10px;
       background: linear-gradient(90deg, blue 0%, rgb(154, 7, 180) 50%, #ff00d4 100%);
       display: inline-block;
@@ -113,7 +116,7 @@ nav{
      margin: 15px;
      width: 100%;
      outline:none;
-     background-color: rgba(235, 2, 146, 0.438);
+     background-color: rgba(2, 111, 235, 0.438);
      border: none;
      border-radius: 10px 10px 0 0;
      text-align: center;

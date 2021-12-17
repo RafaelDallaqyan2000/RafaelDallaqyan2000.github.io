@@ -12,10 +12,12 @@ header{
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 .h1{
   width: 300px;
-  margin: 40px 0 0 20px;
   padding: 20px 0 0 10px;
   background: linear-gradient(90deg, rgb(29, 3, 146) 0%, rgb(10, 7, 180) 50%, #1900ff86 100%);
   display: inline-block;

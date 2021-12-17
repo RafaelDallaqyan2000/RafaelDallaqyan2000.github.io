@@ -14,8 +14,21 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
   }
-
+  .h1{
+    width: 300px;
+   
+    padding: 20px 0 0 10px;
+    background: linear-gradient(90deg, blue 0%, rgb(154, 7, 180) 50%, #ff00d4 100%);
+    display: inline-block;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+/*       
+    animation:slidebg 1s linear infinite ; */
+    }
   nav{
    overflow: hidden;
    background:linear-gradient(140deg, rgb(0, 108, 250) 40%,rgba(101, 5, 255, 0.561),rgb(82, 2, 156) );
@@ -120,17 +133,7 @@
     padding: 5px;
     float: left;
   }
-  .h1{
-    width: 300px;
-    margin: 40px 0 0 20px;
-    padding: 20px 0 0 10px;
-    background: linear-gradient(90deg, blue 0%, rgb(154, 7, 180) 50%, #ff00d4 100%);
-    display: inline-block;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-/*       
-    animation:slidebg 1s linear infinite ; */
-    }
+  
   /* .h1::after{
     content: "";
     width: 60%;
