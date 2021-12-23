@@ -3,6 +3,11 @@
     padding: 0px;
     font-family:cursive, sans-serif;
 }
+body{
+  background: url(../../microsoftInovationCenter/imajes/darkblue.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 header{
   background-image: url(https://i.guim.co.uk/img/media/5a8137ea1b7001b3c90488cdfd59288d62f8d464/0_89_5035_3018/master/5035.jpg?width=465&quality=45&auto=format&fit=max&dpr=2&s=7908b98a4a382ef7fd2ddea8e7a311e0);

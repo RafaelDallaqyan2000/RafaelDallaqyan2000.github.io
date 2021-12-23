@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: cursive, sans-serif;
+}
+.body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction:column;
+    background:url(../../microsoftInovationCenter/imajes/darkblue.jpg);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header{
+    background-image: url(https://i.guim.co.uk/img/media/5a8137ea1b7001b3c90488cdfd59288d62f8d464/0_89_5035_3018/master/5035.jpg?width=465&quality=45&auto=format&fit=max&dpr=2&s=7908b98a4a382ef7fd2ddea8e7a311e0);
+    background-color: #cccccc;
+    height: 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .h1{
+    width: 300px;
+    padding: 20px 0 0 10px;
+    background: linear-gradient(90deg, rgb(29, 3, 146) 0%, rgb(10, 7, 180) 50%, #1900ff86 100%);
+    display: inline-block;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+  }
+  
+  .span{
+    background: linear-gradient(90deg, blue 0%, rgb(154, 7, 180) 50%, #ff00d4 100%);
+  display: inline-block;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation:slidebg 10s linear infinite ;
+  }
+  
+  @keyframes slidebg {
+  to {
+    background-position:30vw;
+  }
+  }
+  nav{
+    overflow: hidden;
+    background:linear-gradient(140deg, rgb(0, 108, 250) 40%,rgba(101, 5, 255, 0.561),rgb(82, 2, 156) );
+    width: 100%;
+     font-size: 17px;
+   }
+  nav ul li{
+    display: inline-flex;
+    padding: 25px 5px 25px 5px;
+    margin-left: 20px ;
+  }
+  nav ul li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    position: relative;
+  }
+  nav ul li a:hover{
+    color: rgb(255, 255, 255);
+    transition: 0.2s;
+  }
+.divPopUp {
+    background-color: rgba(151, 150, 146, 0.404);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:80%;
+}
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+input{
+    width: 20%;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 15px;
+    border: none;
+}
+.submit {
+    cursor: pointer;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    background: darkred;
+    font-weight: bold;
+}
+.submit:hover {
+    color: rgb(17, 19, 119);
+    background-color: rgb(255, 196, 0);
+    
+}
